@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    height: 100vh;
+    color: aliceblue;
+}
+.grid-container{
+    display: grid;
+    
+    grid-template-columns: 1fr 1.2fr 1.5fr;
+    grid-template-rows: 1fr 4fr 3fr 2fr;
+    grid-template-areas: 
+        "main main header"
+        "main main candy"
+        "nom yum candy"
+        "footer footer candy";
+
+    height: 100vh;
+    margin: 2em;
+    grid-gap: 4px;
+    
+}
+/* define main */
+main{
+    /* grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+
+    /* grid-column: 1/3;
+    grid-row: 1/3; */
+
+    grid-area: main;
+    background:#808080;
+    
+    
+}
+section.nom{
+    grid-area: nom;
+    background: #0a0808;
+}
+section.yum{
+    grid-area: yum;
+    background: #2b1b1b;
+}
+section.footer{
+    grid-area: footer;
+    background: #3d1212;
+}
+section.header{
+    grid-area: header;
+    background: #df8a8a;
+
+}
+section.candy{
+    grid-area: candy;
+    background: #a84141;
+}
